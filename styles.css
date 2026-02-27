@@ -1,4 +1,4 @@
-/* Jony Ive Minimalism + Rivian Green */
+/* Jony Ive Minimalism + Rivian Green + Bootstrap */
 
 :root {
     --rivian-green: #00a54f;
@@ -9,101 +9,106 @@
 
 .reveal {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    font-weight: 300;
     color: var(--dark-text);
+}
+
+/* Override Bootstrap where needed */
+.reveal .container {
+    max-width: 1400px;
 }
 
 /* Typography */
-.reveal h1 {
-    font-size: 5em;
+.reveal h1,
+.reveal .display-1 {
     font-weight: 300;
     letter-spacing: -0.03em;
     color: var(--dark-text);
-    margin-bottom: 0.3em;
     text-transform: none;
 }
 
-.reveal h2 {
-    font-size: 2.5em;
-    font-weight: 400;
+.reveal h2,
+.reveal .display-4 {
+    font-weight: 300;
     letter-spacing: -0.02em;
     color: var(--dark-text);
-    margin-bottom: 1em;
     text-transform: none;
 }
 
 .reveal .subtitle {
     font-size: 1.8em;
     font-weight: 300;
-    color: var(--light-text);
-    margin-top: 0;
 }
 
 /* Statistics */
 .reveal .stat-large {
     font-size: 8em;
-    font-weight: 300;
+    font-weight: 200;
     color: var(--rivian-green);
-    margin: 0.5em 0 0.2em 0;
     letter-spacing: -0.04em;
     line-height: 1;
 }
 
 .reveal .label {
-    font-size: 1.5em;
-    font-weight: 400;
-    color: var(--light-text);
-    margin-top: 0;
-}
-
-/* Simple text */
-.reveal .simple-text {
-    font-size: 1.8em;
     font-weight: 300;
-    line-height: 1.8;
-    color: var(--dark-text);
-    max-width: 800px;
-    margin: 2em auto;
 }
 
-/* Stat Grid */
-.reveal .stat-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 60px;
-    margin-top: 100px;
-    padding: 0 60px;
+/* Step Cards */
+.reveal .step-card {
+    background: transparent;
+    border: 1px solid rgba(0, 165, 79, 0.15);
+    border-radius: 16px;
+    transition: all 0.3s ease;
+    min-height: 220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-.reveal .stat-item {
-    text-align: center;
+.reveal .step-card:hover {
+    border-color: var(--rivian-green);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 165, 79, 0.1);
+}
+
+.reveal .step-number {
+    font-size: 3em;
+    font-weight: 200;
+    color: var(--rivian-green);
+    line-height: 1;
+}
+
+/* Stat Cards */
+.reveal .stat-card {
+    background: rgba(0, 165, 79, 0.02);
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    min-height: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.reveal .stat-card:hover {
+    background: rgba(0, 165, 79, 0.05);
+    transform: scale(1.05);
 }
 
 .reveal .stat-number {
-    font-size: 4.5em;
-    font-weight: 400;
     color: var(--rivian-green);
     margin: 0;
-    letter-spacing: -0.03em;
 }
 
 .reveal .stat-label {
-    font-size: 1.2em;
     font-weight: 300;
-    color: var(--light-text);
-    margin-top: 0.5em;
 }
 
 /* Clean up defaults */
 .reveal ul,
 .reveal ol {
     list-style: none;
-    padding: 0;
 }
 
 .reveal li {
-    margin-bottom: 0.8em;
-    font-size: 1.2em;
     font-weight: 300;
 }
 
@@ -114,7 +119,6 @@
 
 .reveal strong {
     font-weight: 500;
-    color: var(--dark-text);
 }
 
 /* Slide numbers */
@@ -124,23 +128,23 @@
     font-weight: 300;
 }
 
-/* Remove all backgrounds and shadows */
+/* Remove backgrounds and shadows */
 .reveal .slides section {
     background: transparent;
     box-shadow: none;
 }
 
-/* Clean transitions */
+/* Center everything */
 .reveal .slides {
     text-align: center;
 }
 
 /* Breathing room */
 .reveal .slides section {
-    padding: 60px;
+    padding: 40px 20px;
 }
 
-/* Minimal accent line (optional) */
+/* Minimal accent line */
 .reveal h2::after {
     content: '';
     display: block;
@@ -148,4 +152,21 @@
     height: 2px;
     background: var(--rivian-green);
     margin: 30px auto 0;
+}
+
+/* Bootstrap utility overrides for minimalism */
+.reveal .text-muted {
+    color: var(--light-text) !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .reveal .stat-large {
+        font-size: 5em;
+    }
+    
+    .reveal .step-card,
+    .reveal .stat-card {
+        min-height: 180px;
+    }
 }
