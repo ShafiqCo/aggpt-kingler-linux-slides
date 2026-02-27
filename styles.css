@@ -1,28 +1,110 @@
-/* Custom styles for AgGPT FDA Inspection Assistant slides */
+/* Jony Ive Minimalism + Rivian Green */
 
-.reveal h1,
-.reveal h2,
-.reveal h3,
-.reveal h4 {
+:root {
+    --rivian-green: #00a54f;
+    --dark-text: #1a1a1a;
+    --light-text: #666666;
+    --background: #ffffff;
+}
+
+.reveal {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-weight: 300;
+    color: var(--dark-text);
+}
+
+/* Typography */
+.reveal h1 {
+    font-size: 5em;
+    font-weight: 300;
+    letter-spacing: -0.03em;
+    color: var(--dark-text);
+    margin-bottom: 0.3em;
     text-transform: none;
 }
 
-.reveal h1 {
-    font-size: 3.5em;
-    font-weight: 700;
-    color: #00d4ff;
-    text-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
-}
-
 .reveal h2 {
-    color: #00d4ff;
-    margin-bottom: 30px;
-    border-bottom: 2px solid #00d4ff;
-    padding-bottom: 10px;
+    font-size: 2.5em;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    color: var(--dark-text);
+    margin-bottom: 1em;
+    text-transform: none;
 }
 
-.reveal h3 {
-    color: #ff006e;
+.reveal .subtitle {
+    font-size: 1.8em;
+    font-weight: 300;
+    color: var(--light-text);
+    margin-top: 0;
+}
+
+/* Statistics */
+.reveal .stat-large {
+    font-size: 8em;
+    font-weight: 300;
+    color: var(--rivian-green);
+    margin: 0.5em 0 0.2em 0;
+    letter-spacing: -0.04em;
+    line-height: 1;
+}
+
+.reveal .label {
+    font-size: 1.5em;
+    font-weight: 400;
+    color: var(--light-text);
+    margin-top: 0;
+}
+
+/* Simple text */
+.reveal .simple-text {
+    font-size: 1.8em;
+    font-weight: 300;
+    line-height: 1.8;
+    color: var(--dark-text);
+    max-width: 800px;
+    margin: 2em auto;
+}
+
+/* Stat Grid */
+.reveal .stat-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 60px;
+    margin-top: 100px;
+    padding: 0 60px;
+}
+
+.reveal .stat-item {
+    text-align: center;
+}
+
+.reveal .stat-number {
+    font-size: 4.5em;
+    font-weight: 400;
+    color: var(--rivian-green);
+    margin: 0;
+    letter-spacing: -0.03em;
+}
+
+.reveal .stat-label {
+    font-size: 1.2em;
+    font-weight: 300;
+    color: var(--light-text);
+    margin-top: 0.5em;
+}
+
+/* Clean up defaults */
+.reveal ul,
+.reveal ol {
+    list-style: none;
+    padding: 0;
+}
+
+.reveal li {
+    margin-bottom: 0.8em;
+    font-size: 1.2em;
+    font-weight: 300;
 }
 
 .reveal section img {
@@ -30,58 +112,40 @@
     box-shadow: none;
 }
 
-/* Color scheme */
-:root {
-    --primary-color: #00d4ff;
-    --secondary-color: #ff006e;
-    --accent-color: #00ff9d;
-}
-
-.reveal .highlight {
-    color: var(--secondary-color);
-    font-weight: bold;
-}
-
-.reveal ul,
-.reveal ol {
-    line-height: 1.6;
-}
-
-.reveal li {
-    margin-bottom: 10px;
-}
-
 .reveal strong {
-    color: var(--primary-color);
+    font-weight: 500;
+    color: var(--dark-text);
 }
 
-/* Grid layouts */
-.reveal .two-column {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-}
-
-/* Emphasis boxes */
-.reveal .emphasis-box {
-    background: rgba(0, 212, 255, 0.1);
-    border-left: 4px solid var(--primary-color);
-    padding: 20px;
-    margin: 20px 0;
-    border-radius: 5px;
-}
-
-/* Slide numbers styling */
+/* Slide numbers */
 .reveal .slide-number {
-    color: var(--primary-color);
+    color: var(--light-text);
+    font-size: 0.8em;
+    font-weight: 300;
 }
 
-/* Fragment animations */
-.reveal .slides section .fragment.highlight-current-blue {
-    opacity: 1;
-    visibility: inherit;
+/* Remove all backgrounds and shadows */
+.reveal .slides section {
+    background: transparent;
+    box-shadow: none;
 }
 
-.reveal .slides section .fragment.highlight-current-blue.current-fragment {
-    color: var(--primary-color);
+/* Clean transitions */
+.reveal .slides {
+    text-align: center;
+}
+
+/* Breathing room */
+.reveal .slides section {
+    padding: 60px;
+}
+
+/* Minimal accent line (optional) */
+.reveal h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 2px;
+    background: var(--rivian-green);
+    margin: 30px auto 0;
 }
