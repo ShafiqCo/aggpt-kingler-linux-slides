@@ -1,10 +1,10 @@
 /* Gumroad-Inspired Design System */
 
 :root {
-    /* Colors - No Pink */
-    --accent: #FFC900;
-    --accent-alt: #23A094;
-    --black: #000000;
+    /* Colors - Clean & Professional */
+    --accent: #2563EB;          /* Blue */
+    --accent-alt: #10B981;      /* Emerald */
+    --black: #1a1a1a;
     --white: #FFFFFF;
     --gray: #6B6B6B;
     --light: #F4F4F0;
@@ -69,41 +69,45 @@
     color: var(--black);
 }
 
-/* Step Cards - Gumroad Style */
-.reveal .step-card {
+/* Unified Card Style */
+.reveal .step-card,
+.reveal .stat-card {
     background: var(--white);
-    border: 3px solid var(--black);
+    border: 2px solid var(--black);
     border-radius: 16px;
     transition: all 0.2s ease;
-    min-height: 220px;
+    min-height: 200px;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    box-shadow: 6px 6px 0 var(--black);
+    align-items: center;
+    box-shadow: 5px 5px 0 var(--black);
+    padding: 24px;
 }
 
-.reveal .step-card:hover {
-    transform: translate(-4px, -4px);
-    box-shadow: 10px 10px 0 var(--accent);
-}
-
-/* Stat Cards - Gumroad Style */
-.reveal .stat-card {
-    background: var(--light);
-    border: 3px solid var(--black);
-    border-radius: 20px;
-    transition: all 0.2s ease;
-    min-height: 280px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    box-shadow: 6px 6px 0 var(--black);
-}
-
+.reveal .step-card:hover,
 .reveal .stat-card:hover {
-    transform: translate(-4px, -4px);
-    box-shadow: 10px 10px 0 var(--accent-alt);
-    background: var(--white);
+    transform: translate(-3px, -3px);
+    box-shadow: 8px 8px 0 var(--accent);
+}
+
+/* Video placeholder card */
+.reveal .video-card {
+    background: var(--light);
+    border: 2px dashed var(--black);
+    border-radius: 16px;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s ease;
+}
+
+.reveal .video-card:hover {
+    border-style: solid;
+    box-shadow: 5px 5px 0 var(--accent);
 }
 
 .reveal .stat-number {
