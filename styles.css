@@ -1,21 +1,20 @@
 /* Gumroad-Inspired Design System */
 
 :root {
-    /* Gumroad Colors */
-    --gumroad-pink: #FF90E8;
-    --gumroad-black: #000000;
-    --gumroad-white: #FFFFFF;
-    --gumroad-yellow: #FFC900;
-    --gumroad-blue: #23A094;
-    --gumroad-gray: #6B6B6B;
-    --gumroad-light: #F4F4F0;
+    /* Colors - No Pink */
+    --accent: #FFC900;
+    --accent-alt: #23A094;
+    --black: #000000;
+    --white: #FFFFFF;
+    --gray: #6B6B6B;
+    --light: #F4F4F0;
 }
 
 /* Base Styles */
 .reveal {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
-    color: var(--gumroad-black);
-    background: var(--gumroad-white);
+    color: var(--black);
+    background: var(--white);
 }
 
 .reveal .slides {
@@ -27,7 +26,7 @@
 .reveal .display-1 {
     font-weight: 700;
     letter-spacing: -0.03em;
-    color: var(--gumroad-black);
+    color: var(--black);
     text-transform: none;
 }
 
@@ -35,7 +34,7 @@
 .reveal .display-4 {
     font-weight: 700;
     letter-spacing: -0.02em;
-    color: var(--gumroad-black);
+    color: var(--black);
     text-transform: none;
 }
 
@@ -47,118 +46,118 @@
 .reveal .subtitle {
     font-size: 1.6em;
     font-weight: 400;
-    color: var(--gumroad-gray);
+    color: var(--gray);
 }
 
 .reveal .text-muted {
-    color: var(--gumroad-gray) !important;
+    color: var(--gray) !important;
 }
 
 /* Statistics - Big and Bold */
 .reveal .stat-large {
     font-size: 9em;
     font-weight: 800;
-    color: var(--gumroad-black);
+    color: var(--black);
     letter-spacing: -0.04em;
     line-height: 1;
-    text-shadow: 6px 6px 0 var(--gumroad-pink);
+    text-shadow: 6px 6px 0 var(--accent);
 }
 
 .reveal .label {
     font-weight: 500;
     font-size: 1.4em;
-    color: var(--gumroad-black);
+    color: var(--black);
 }
 
 /* Step Cards - Gumroad Style */
 .reveal .step-card {
-    background: var(--gumroad-white);
-    border: 3px solid var(--gumroad-black);
+    background: var(--white);
+    border: 3px solid var(--black);
     border-radius: 16px;
     transition: all 0.2s ease;
     min-height: 220px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    box-shadow: 6px 6px 0 var(--gumroad-black);
+    box-shadow: 6px 6px 0 var(--black);
 }
 
 .reveal .step-card:hover {
     transform: translate(-4px, -4px);
-    box-shadow: 10px 10px 0 var(--gumroad-pink);
+    box-shadow: 10px 10px 0 var(--accent);
 }
 
 /* Stat Cards - Gumroad Style */
 .reveal .stat-card {
-    background: var(--gumroad-light);
-    border: 3px solid var(--gumroad-black);
+    background: var(--light);
+    border: 3px solid var(--black);
     border-radius: 20px;
     transition: all 0.2s ease;
     min-height: 280px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    box-shadow: 6px 6px 0 var(--gumroad-black);
+    box-shadow: 6px 6px 0 var(--black);
 }
 
 .reveal .stat-card:hover {
     transform: translate(-4px, -4px);
-    box-shadow: 10px 10px 0 var(--gumroad-yellow);
-    background: var(--gumroad-white);
+    box-shadow: 10px 10px 0 var(--accent-alt);
+    background: var(--white);
 }
 
 .reveal .stat-number {
-    color: var(--gumroad-black);
+    color: var(--black);
     margin: 0;
     font-weight: 800;
-    text-shadow: 4px 4px 0 var(--gumroad-pink);
+    text-shadow: 4px 4px 0 var(--accent);
 }
 
 .reveal .stat-label {
     font-weight: 500;
-    color: var(--gumroad-black);
+    color: var(--black);
 }
 
 /* Icons - Gumroad Style */
 .reveal .icon-hero {
     font-size: 5em;
-    color: var(--gumroad-pink);
+    color: var(--accent);
     display: block;
-    filter: drop-shadow(4px 4px 0 var(--gumroad-black));
+    filter: drop-shadow(4px 4px 0 var(--black));
 }
 
 .reveal .icon-problem {
     font-size: 4em;
-    color: var(--gumroad-yellow);
+    color: var(--accent-alt);
     display: block;
-    filter: drop-shadow(3px 3px 0 var(--gumroad-black));
+    filter: drop-shadow(3px 3px 0 var(--black));
 }
 
 .reveal .icon-step {
     font-size: 3em;
-    color: var(--gumroad-pink);
+    color: var(--accent);
     display: block;
     transition: all 0.2s ease;
-    filter: drop-shadow(3px 3px 0 var(--gumroad-black));
+    filter: drop-shadow(3px 3px 0 var(--black));
 }
 
 .reveal .icon-stat {
     font-size: 2.5em;
-    color: var(--gumroad-blue);
+    color: var(--accent-alt);
     display: block;
     transition: all 0.2s ease;
-    filter: drop-shadow(2px 2px 0 var(--gumroad-black));
+    filter: drop-shadow(2px 2px 0 var(--black));
 }
 
 /* Icon hover animations */
 .reveal .step-card:hover .icon-step {
     transform: scale(1.1) rotate(-5deg);
-    color: var(--gumroad-yellow);
+    color: var(--accent-alt);
 }
 
 .reveal .stat-card:hover .icon-stat {
     transform: scale(1.1) rotate(5deg);
-    color: var(--gumroad-pink);
+    color: var(--accent);
 }
 
 /* Container */
@@ -186,7 +185,7 @@
 
 .reveal li {
     font-weight: 500;
-    color: var(--gumroad-black);
+    color: var(--black);
 }
 
 /* Images */
@@ -198,15 +197,15 @@
 /* Strong text */
 .reveal strong {
     font-weight: 700;
-    color: var(--gumroad-black);
-    background: var(--gumroad-pink);
+    color: var(--black);
+    background: var(--accent);
     padding: 0 6px;
 }
 
 /* Card text */
 .reveal .step-card p,
 .reveal .stat-card p {
-    color: var(--gumroad-black);
+    color: var(--black);
     font-weight: 500;
 }
 
@@ -217,7 +216,7 @@
 }
 
 .reveal h2 span.highlight {
-    background: linear-gradient(180deg, transparent 60%, var(--gumroad-pink) 60%);
+    background: linear-gradient(180deg, transparent 60%, var(--accent) 60%);
 }
 
 /* Responsive */
@@ -229,7 +228,7 @@
     .reveal .step-card,
     .reveal .stat-card {
         min-height: 180px;
-        box-shadow: 4px 4px 0 var(--gumroad-black);
+        box-shadow: 4px 4px 0 var(--black);
     }
     
     .reveal .icon-hero {
