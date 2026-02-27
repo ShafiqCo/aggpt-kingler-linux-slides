@@ -1,20 +1,25 @@
-/* Jony Ive Minimalism + Rivian Green + Bootstrap */
+/* Rivian-Inspired Design System */
 
 :root {
-    --rivian-green: #00a54f;
-    --dark-text: #1a1a1a;
-    --light-text: #666666;
-    --background: #ffffff;
+    /* Rivian Core Colors */
+    --rivian-green: #4A7C59;          /* Forest green - primary */
+    --rivian-launch-green: #86BC25;   /* Bright accent green */
+    --rivian-dark: #0D0D0D;           /* Near-black background */
+    --rivian-charcoal: #1A1A1A;       /* Card backgrounds */
+    --rivian-warm-white: #F5F5F0;     /* Primary text */
+    --rivian-sand: #C4B9A7;           /* Secondary text */
+    --rivian-stone: #8A8A8A;          /* Muted text */
 }
 
+/* Base Styles */
 .reveal {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    color: var(--dark-text);
+    color: var(--rivian-warm-white);
+    background: var(--rivian-dark);
 }
 
-/* Override Bootstrap where needed */
-.reveal .container {
-    max-width: 1400px;
+.reveal .slides {
+    text-align: center;
 }
 
 /* Typography */
@@ -22,7 +27,7 @@
 .reveal .display-1 {
     font-weight: 300;
     letter-spacing: -0.03em;
-    color: var(--dark-text);
+    color: var(--rivian-warm-white);
     text-transform: none;
 }
 
@@ -30,34 +35,40 @@
 .reveal .display-4 {
     font-weight: 300;
     letter-spacing: -0.02em;
-    color: var(--dark-text);
+    color: var(--rivian-warm-white);
     text-transform: none;
 }
 
 .reveal .subtitle {
     font-size: 1.8em;
     font-weight: 300;
+    color: var(--rivian-sand);
+}
+
+.reveal .text-muted {
+    color: var(--rivian-sand) !important;
 }
 
 /* Statistics */
 .reveal .stat-large {
     font-size: 8em;
     font-weight: 200;
-    color: var(--rivian-green);
+    color: var(--rivian-launch-green);
     letter-spacing: -0.04em;
     line-height: 1;
 }
 
 .reveal .label {
     font-weight: 300;
+    color: var(--rivian-sand);
 }
 
-/* Step Cards */
+/* Step Cards - Rivian Style */
 .reveal .step-card {
-    background: transparent;
-    border: 1px solid rgba(0, 165, 79, 0.15);
-    border-radius: 16px;
-    transition: all 0.3s ease;
+    background: var(--rivian-charcoal);
+    border: 1px solid rgba(74, 124, 89, 0.2);
+    border-radius: 20px;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     min-height: 220px;
     display: flex;
     flex-direction: column;
@@ -66,110 +77,51 @@
 
 .reveal .step-card:hover {
     border-color: var(--rivian-green);
-    transform: translateY(-4px);
-    box-shadow: 0 8px 24px rgba(0, 165, 79, 0.1);
+    background: linear-gradient(145deg, var(--rivian-charcoal), rgba(74, 124, 89, 0.1));
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
 }
 
-.reveal .step-number {
-    font-size: 3em;
-    font-weight: 200;
-    color: var(--rivian-green);
-    line-height: 1;
-}
-
-/* Stat Cards */
+/* Stat Cards - Rivian Style */
 .reveal .stat-card {
-    background: rgba(0, 165, 79, 0.02);
-    border-radius: 20px;
-    transition: all 0.3s ease;
+    background: linear-gradient(145deg, var(--rivian-charcoal), rgba(74, 124, 89, 0.05));
+    border-radius: 24px;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     min-height: 280px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    border: 1px solid rgba(74, 124, 89, 0.15);
 }
 
 .reveal .stat-card:hover {
-    background: rgba(0, 165, 79, 0.05);
-    transform: scale(1.05);
+    background: linear-gradient(145deg, rgba(74, 124, 89, 0.15), var(--rivian-charcoal));
+    transform: scale(1.03);
+    box-shadow: 0 24px 48px rgba(0, 0, 0, 0.5);
 }
 
 .reveal .stat-number {
-    color: var(--rivian-green);
+    color: var(--rivian-launch-green);
     margin: 0;
 }
 
 .reveal .stat-label {
     font-weight: 300;
+    color: var(--rivian-sand);
 }
 
-/* Clean up defaults */
-.reveal ul,
-.reveal ol {
-    list-style: none;
-}
-
-.reveal li {
-    font-weight: 300;
-}
-
-.reveal section img {
-    border: none;
-    box-shadow: none;
-}
-
-.reveal strong {
-    font-weight: 500;
-}
-
-/* Slide numbers */
-.reveal .slide-number {
-    color: var(--light-text);
-    font-size: 0.8em;
-    font-weight: 300;
-}
-
-/* Remove backgrounds and shadows */
-.reveal .slides section {
-    background: transparent;
-    box-shadow: none;
-}
-
-/* Center everything */
-.reveal .slides {
-    text-align: center;
-}
-
-/* Breathing room */
-.reveal .slides section {
-    padding: 40px 20px;
-}
-
-/* Minimal accent line */
-.reveal h2::after {
-    content: '';
-    display: block;
-    width: 60px;
-    height: 2px;
-    background: var(--rivian-green);
-    margin: 30px auto 0;
-}
-
-/* Bootstrap utility overrides for minimalism */
-.reveal .text-muted {
-    color: var(--light-text) !important;
-}
-
-/* Icons */
+/* Icons - Rivian Style */
 .reveal .icon-hero {
     font-size: 5em;
     color: var(--rivian-green);
     display: block;
+    opacity: 0.9;
 }
 
 .reveal .icon-problem {
     font-size: 4em;
-    color: var(--rivian-green);
-    opacity: 0.3;
+    color: var(--rivian-launch-green);
+    opacity: 0.25;
     display: block;
 }
 
@@ -177,30 +129,85 @@
     font-size: 3.5em;
     color: var(--rivian-green);
     display: block;
-    opacity: 0.8;
+    opacity: 0.7;
+    transition: all 0.4s ease;
 }
 
 .reveal .icon-stat {
     font-size: 2.5em;
     color: var(--rivian-green);
     display: block;
-    opacity: 0.6;
+    opacity: 0.5;
+    transition: all 0.4s ease;
 }
 
-/* Icon animations on hover */
+/* Icon hover animations */
 .reveal .step-card:hover .icon-step {
     opacity: 1;
-    transform: scale(1.1);
-    transition: all 0.3s ease;
+    color: var(--rivian-launch-green);
+    transform: scale(1.15);
 }
 
 .reveal .stat-card:hover .icon-stat {
     opacity: 1;
-    transform: scale(1.1);
-    transition: all 0.3s ease;
+    color: var(--rivian-launch-green);
+    transform: scale(1.15);
 }
 
-/* Responsive adjustments */
+/* Accent line - Rivian green gradient */
+.reveal h2::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--rivian-green), var(--rivian-launch-green));
+    margin: 30px auto 0;
+    border-radius: 2px;
+}
+
+/* Container */
+.reveal .container {
+    max-width: 1400px;
+}
+
+/* Section padding */
+.reveal .slides section {
+    padding: 40px 20px;
+    background: transparent;
+    box-shadow: none;
+}
+
+/* Slide numbers */
+.reveal .slide-number {
+    color: var(--rivian-stone);
+    font-size: 0.8em;
+    font-weight: 300;
+}
+
+/* Lists */
+.reveal ul,
+.reveal ol {
+    list-style: none;
+}
+
+.reveal li {
+    font-weight: 300;
+    color: var(--rivian-warm-white);
+}
+
+/* Images */
+.reveal section img {
+    border: none;
+    box-shadow: none;
+}
+
+/* Strong text */
+.reveal strong {
+    font-weight: 500;
+    color: var(--rivian-launch-green);
+}
+
+/* Responsive */
 @media (max-width: 768px) {
     .reveal .stat-large {
         font-size: 5em;
