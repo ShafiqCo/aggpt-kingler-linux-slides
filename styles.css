@@ -1,0 +1,27 @@
+/* Custom styles for AGGPT Kingler Linux slides */
+
+.reveal h1,
+.reveal h2,
+.reveal h3 {
+    text-transform: none;
+}
+
+.reveal section img {
+    border: none;
+    box-shadow: none;
+}
+
+/* Add custom color scheme if needed */
+:root {
+    --primary-color: #00d4ff;
+    --secondary-color: #ff006e;
+}
+
+.reveal .slides section .fragment.highlight-current-blue {
+    opacity: 1;
+    visibility: inherit;
+}
+
+.reveal .slides section .fragment.highlight-current-blue.current-fragment {
+    color: var(--primary-color);
+}
