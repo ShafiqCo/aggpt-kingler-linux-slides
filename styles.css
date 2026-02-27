@@ -159,6 +159,47 @@
     color: var(--light-text) !important;
 }
 
+/* Icons */
+.reveal .icon-hero {
+    font-size: 5em;
+    color: var(--rivian-green);
+    display: block;
+}
+
+.reveal .icon-problem {
+    font-size: 4em;
+    color: var(--rivian-green);
+    opacity: 0.3;
+    display: block;
+}
+
+.reveal .icon-step {
+    font-size: 3.5em;
+    color: var(--rivian-green);
+    display: block;
+    opacity: 0.8;
+}
+
+.reveal .icon-stat {
+    font-size: 2.5em;
+    color: var(--rivian-green);
+    display: block;
+    opacity: 0.6;
+}
+
+/* Icon animations on hover */
+.reveal .step-card:hover .icon-step {
+    opacity: 1;
+    transform: scale(1.1);
+    transition: all 0.3s ease;
+}
+
+.reveal .stat-card:hover .icon-stat {
+    opacity: 1;
+    transform: scale(1.1);
+    transition: all 0.3s ease;
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .reveal .stat-large {
@@ -168,5 +209,14 @@
     .reveal .step-card,
     .reveal .stat-card {
         min-height: 180px;
+    }
+    
+    .reveal .icon-hero {
+        font-size: 3em;
+    }
+    
+    .reveal .icon-step,
+    .reveal .icon-stat {
+        font-size: 2em;
     }
 }
