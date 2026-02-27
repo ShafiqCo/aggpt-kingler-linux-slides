@@ -1,9 +1,28 @@
-/* Custom styles for AGGPT Kingler Linux slides */
+/* Custom styles for AgGPT FDA Inspection Assistant slides */
 
 .reveal h1,
 .reveal h2,
-.reveal h3 {
+.reveal h3,
+.reveal h4 {
     text-transform: none;
+}
+
+.reveal h1 {
+    font-size: 3.5em;
+    font-weight: 700;
+    color: #00d4ff;
+    text-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
+}
+
+.reveal h2 {
+    color: #00d4ff;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #00d4ff;
+    padding-bottom: 10px;
+}
+
+.reveal h3 {
+    color: #ff006e;
 }
 
 .reveal section img {
@@ -11,12 +30,53 @@
     box-shadow: none;
 }
 
-/* Add custom color scheme if needed */
+/* Color scheme */
 :root {
     --primary-color: #00d4ff;
     --secondary-color: #ff006e;
+    --accent-color: #00ff9d;
 }
 
+.reveal .highlight {
+    color: var(--secondary-color);
+    font-weight: bold;
+}
+
+.reveal ul,
+.reveal ol {
+    line-height: 1.6;
+}
+
+.reveal li {
+    margin-bottom: 10px;
+}
+
+.reveal strong {
+    color: var(--primary-color);
+}
+
+/* Grid layouts */
+.reveal .two-column {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+/* Emphasis boxes */
+.reveal .emphasis-box {
+    background: rgba(0, 212, 255, 0.1);
+    border-left: 4px solid var(--primary-color);
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 5px;
+}
+
+/* Slide numbers styling */
+.reveal .slide-number {
+    color: var(--primary-color);
+}
+
+/* Fragment animations */
 .reveal .slides section .fragment.highlight-current-blue {
     opacity: 1;
     visibility: inherit;

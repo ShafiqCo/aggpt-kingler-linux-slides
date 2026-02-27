@@ -1,6 +1,6 @@
-# AGGPT Kingler Linux - Slides
+# AgGPT - AI-Powered FDA Inspection Assistant
 
-HTML slide deck for the AGGPT Kingler Linux project.
+Presentation slide deck for AgGPT, an AI assistant that transforms FDA facility inspections through intelligent voice transcription and automated report generation.
 
 ## View Slides
 
@@ -16,7 +16,7 @@ Open `index.html` in a browser or visit the GitHub Pages URL (if enabled).
 
 ```bash
 # Clone the repo
-git clone https://github.com/kinglershafiq/aggpt-kingler-linux-slides.git
+git clone https://github.com/ShafiqCo/aggpt-kingler-linux-slides.git
 cd aggpt-kingler-linux-slides
 
 # Open in browser
